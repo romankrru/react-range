@@ -21,7 +21,7 @@ class RangeInput extends React.Component {
     
     document.addEventListener('mouseup', this.documentMouseUpHandler);
 
-    this.props.onValueChange({value: this.props.min})
+    this.props.onValueChange({value: this.props.min});
   }
 
   componentWillUnmount() {
@@ -31,9 +31,7 @@ class RangeInput extends React.Component {
 
   normalizeValue = () => {
     const {min, max} = this.props;
-
     const percantage = this.state.leftPos / this.maxLeftPosValue;
-
     const value = ((max - min) * percantage) + min;
 
     return value;
